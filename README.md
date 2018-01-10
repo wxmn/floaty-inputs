@@ -1,7 +1,7 @@
 # Floaty Form Inputs
 *Simple CSS + JS for user-friendly "floaty" HTML form inputs*
 
-Check out a (live demo of an example form)[https://wxmn.github.io/floaty-inputs/index.html].
+Check out a [live demo of an example form](https://wxmn.github.io/floaty-inputs/index.html).
 
 ## Why "Floaty" Form Inputs
 
@@ -69,7 +69,7 @@ Now your Rails views will render HTML that work out of the box with floaty.css a
 
 ## Example Form
 
-Check out a (live demo of an example form)[https://wxmn.github.io/floaty-inputs/index.html].
+Check out a [live demo of an example form](https://wxmn.github.io/floaty-inputs/index.html).
 
 Here is an image of an example:
 
