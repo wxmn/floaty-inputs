@@ -1,0 +1,155 @@
+.field {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 1em;
+}
+
+.input-background {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  left: 0;
+  bottom: 0;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  padding: 12px;
+  z-index: 0;
+  border: 2px solid #999999;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform-origin: 0 50%;
+  padding: 12px;
+  padding-bottom: 0;
+  padding-top: 28px;
+  transition-property: color, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  z-index: 1;
+  color: #AAAAAA;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+}
+
+ input.floaty {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 7px;
+  color: #333333;
+  background-color: transparent;
+  padding-left: 11px;
+  z-index: 1;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.floaty::-webkit-input-placeholder {
+  color: transparent;
+  transition: color 0.3s ease-out;
+}
+
+.floaty::-moz-placeholder {
+  color: transparent;
+  transition: color 0.3s ease-out;
+}
+
+.floaty:-ms-input-placeholder {
+  color: transparent;
+  transition: color 0.3s ease-out;
+}
+
+.floaty.focused,
+.floaty:not(.empty) {
+  opacity: 1;
+}
+
+.floaty:not(.focused),
+.floaty:not(.empty) {
+  color: #777777;
+}
+
+.floaty.focused::-webkit-input-placeholder,
+.floaty:not(.empty)::-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+
+.floaty.focused::-moz-placeholder,
+.floaty:not(.empty)::-moz-placeholder {
+  color: #CCCCCC;
+}
+
+.floaty.focused:-ms-input-placeholder,
+.floaty:not(.empty):-ms-input-placeholder {
+  color: #CCCCCC;
+}
+
+.floaty.focused + label,
+.floaty:not(.empty) + label {
+  transform: scale(0.75) translateY(-12px);
+  cursor: default;
+  color: #AAAAAA;
+}
+
+.floaty.focused + label {
+  color: #AAAAAA;
+}
+
+.floaty.invalid + label {
+  color: red;
+}
+
+.floaty.focused + label + .input-background {
+  background-color: #FFFFFF;
+  border-color: #111111;
+}
+
+.floaty.focused.invalid + label + .input-background {
+  background-color: #FFFFFF;
+  border-color: red;
+}
+
+.floaty.error {
+  color: red;
+}
+
+.floaty.error + label + .input-background {
+  border-color: red;
+}
+
+input,  button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #555;
+  background-color: transparent;
+  transition: background-color 100000000s;
+  -webkit-animation: 1ms void-animation-out;
+}
+
+input,  button {
+  -webkit-animation: 1ms void-animation-out;
+}
+
+input:active {
+  background-color: transparent;
+}

@@ -1,0 +1,88 @@
+.example {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.summary {
+  padding: 0 20px;
+}
+
+.summary p {
+  max-width: 600px;
+}
+
+.example-form {
+  max-width: 320px;
+  padding: 10px 20px;
+  padding-right: 45px;
+}
+
+.example-form h3 {
+  margin-top: 0;
+}
+
+.code {
+  padding: 20px;
+}
+
+b {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 90%;
+}
+
+.example p,
+.example li {
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
+}
+
+li {
+  max-width: 600px;
+}
+
+li code, p code {
+  color: #444;
+  background-color: #f7f7f7;
+  padding: 4px 8px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+pre {
+  padding: 0;
+  max-width: 600px;
+  white-space: pre-wrap;
+  background-color: #4a4a4a;
+  color: #f7f7f7;
+  font-weight: 400;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.code pre code {
+  padding: 10px;
+}
+
+.example-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #999;
+  padding-bottom: 2px;
+  margin-top: 8px;
+}
+
+.thanks {
+  border-top: 1px solid #DDDDDD;
+  padding-top: 20px;
+  margin-top: 40px;
+}

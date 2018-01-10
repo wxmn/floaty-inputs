@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="example/highlight.css">
+  <link rel="stylesheet" media="all" href="example/example.css">
+  <link rel="stylesheet" media="all" href="source/floaty.css">
+</head>
+<body class="example">
+
+  <div class="summary">
+    <h1>Floaty Form Inputs</h1>
+    <p>Floaty form inputs provide a great user experience: combining labels and inputs decreases cognitive load, and unlike with HTML placeholders, the label is always visible.</p>
+  </div>
+
+  <div class="example-form">
+    <div class="content">
+      <h3>Example Floaty Inputs
+        <div class="example-label">Click around</div>
+      </h3>
+      <form>
+        <div class="field">
+          <input id="checkout_first_name" name="checkout[first_name]" type="text" class="floaty" placeholder="Steve">
+          <label for="checkout_first_name">First Name</label>
+          <div class="input-background"></div>
+        </div>
+
+        <div class="field">
+          <input id="checkout_last_name" name="checkout[last_name]" type="text" class="floaty focused" placeholder="Jobs">
+          <label for="checkout_last_name">Last Name</label>
+          <div class="input-background"></div>
+        </div>
+
+        <div class="field">
+          <input id="checkout_address" name="checkout[address]" type="text" class="floaty" placeholder="123 Main St" value="1 Infinite Loop">
+          <label for="checkout_address">Street Address</label>
+          <div class="input-background"></div>
+        </div>
+
+
+        <div class="field">
+          <input id="checkout_city" name="checkout[city]" type="text" class="floaty error" placeholder="Cupertino" value="Palo Alto">
+          <label for="checkout_city">City</label>
+          <div class="input-background"></div>
+        </div>
+        <div class="example-label">The Default states (from top to bottom) are 1. empty, 2. focused, 3. valid, 4. error</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="code">
+    <h3>Usage</h3>
+
+    <p>
+      Add <code>floaty.css</code> and <code>floaty.js</code> , then format your HTML inputs in the following way...
+    </p>
+
+    <p>
+      Each input needs the following:
+      <ul>
+        <li>1st: An outer wrapper <code>div</code> with the class <code>"field"</code></li>
+        <li>2nd: The <code>input</code> itself with the class <code>"floaty"</code></li>
+        <li>3rd: A <code>label</code> that uses the <code>for</code> attribute (which refers to the <code>id</code> of the input)</li>
+        <li>4th: A <code>div</code> with the class <code>"input-background"</code></li>
+        <li>...and it needs to be in that order, because of the way CSS works.</li>
+      </ul>
+    </p>
+<pre><code class="html">&lt;!--form.html--&gt;
+&lt;form&gt;
+  &lt;div class="field"&gt;
+    &lt;input class="floaty" id="first_name" placeholder="Steve"&gt;
+    &lt;label for="first_name"&gt;First Name&lt;label/&gt;
+    &lt;div class="input-background"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+    <div class="code">
+    <h3>Rails Simple Form config</h3>
+<p>Add this to your Simple Form initializer:</p>
+<pre><code class="ruby"># config/initalizers/simple_form.rb
+SimpleForm.setup do |config|
+  config.wrappers :floaty, tag: "div" do |b|
+    b.use :html5
+    b.use :placeholder
+    b.wrapper tag :div, class: "field" do |c|
+      c.use :input, class: "floaty"
+      c.use :label
+      c.wrapper tag: :div, class: "input-background" do |d|
+      end
+    end
+  end
+end
+</code></pre>
+<p>Then in your view you can use:</p>
+<pre><code># app/views/checkouts/_form.html.erb
+<%= simple_form_for :checkout, wrapper: :floaty do |f| %>
+  <%= f.input :first_name, placeholder: "Tim" %>
+  <%= f.input :last_name, placeholder: "Urban" %>
+  <%= f.submit %>
+<% end %>
+</code></pre>
+<p>Now your Rails views will render HTML that work out of the box with floaty.css and floaty.js</p>
+  <p class="thanks">
+  Thank you to Stripe's <a href="https://stripe.github.io/elements-examples/" target="_blank">Elements Examples</a> for inspiring this approach.
+  </p>
+  </div>
+  <script src="source/floaty.js"></script>
+  <script src="example/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
