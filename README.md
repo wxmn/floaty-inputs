@@ -3,6 +3,10 @@
 
 Check out a [live demo of an example form](https://wxmn.github.io/floaty-inputs/index.html).
 
+Here is an image of an example:
+
+<img src="https://raw.githubusercontent.com/wxmn/floaty-inputs/master/example/floaty-inputs-example.png" width="400"/>
+
 ## Why "Floaty" Form Inputs
 
 Floaty form inputs provide a great user experience: combining labels and inputs decreases cognitive load, and unlike with HTML placeholders, the label is always visible.
@@ -66,14 +70,6 @@ Then in your view you can use:
 ```
 
 Now your Rails views will render HTML that work out of the box with floaty.css and floaty.js
-
-## Example Form
-
-Check out a [live demo of an example form](https://wxmn.github.io/floaty-inputs/index.html).
-
-Here is an image of an example:
-
-![Floaty Inputs Example](https://raw.githubusercontent.com/wxmn/floaty-inputs/master/example/floaty-inputs-example.png)
 
 ***
 
