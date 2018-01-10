@@ -5,7 +5,7 @@ Check out a [live demo of an example form](https://wxmn.github.io/floaty-inputs/
 
 Here is an image of an example:
 
-<img src="https://raw.githubusercontent.com/wxmn/floaty-inputs/master/example/floaty-inputs-example.png" width="400"/>
+<img src="https://raw.githubusercontent.com/wxmn/floaty-inputs/master/example/floaty-inputs-example.png" width="600"/>
 
 ## Why "Floaty" Form Inputs
 
