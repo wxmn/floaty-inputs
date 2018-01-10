@@ -60,7 +60,7 @@ end
 
 Then in your view you can use:
 
-```
+```HTML+ERB
 # app/views/checkouts/_form.html.erb
 <%= simple_form_for :checkout, wrapper: :floaty do |f| %>
   <%= f.input :first_name, placeholder: "Tim" %>
